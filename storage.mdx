@@ -1,0 +1,33 @@
+---
+title: "Video storage and retention"
+description: "Video storage and retention in Kaynos. Backblaze B2, 6-month retention, 100 video / 50 GB defaults."
+---
+## Where video is stored
+
+Videos live in [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) (US-hosted). Playback uses short-lived presigned URLs issued directly from B2 — no third-party CDN sits in front of video delivery.
+
+## Retention
+
+Default retention is **6 months per school**, with a **30-day grace period** before deletion. Expiring videos surface one month before the limit. Admins can view expiring videos from the Admin panel; to change the retention limit, email support — the limit is set per school by Kaynos staff, not from the Admin UI.
+
+
+<Tip>
+  Upload limits and codecs: [Supported formats and limits](/formats).
+</Tip>
+
+
+## Default quotas
+
+-   **100 videos** per school.
+-   **50 GB storage** per school.
+-   Admins can request increases via the Admin panel.
+
+## Security
+
+-   HTTPS for all data in transit.
+-   Account data is isolated — your files are not mixed with other organizations' storage.
+-   Playback URLs are time-limited (**4 hours**); upload URLs shorter still (**1 hour**). Share access inside Kaynos rather than passing long-lived direct links — if a link stops working partway through, re-open the video in the app to fetch a fresh one.
+
+## Data residency
+
+Videos are stored in Backblaze B2 (US) and streamed directly via short-lived presigned URLs. For EU customers: Backblaze offers Standard Contractual Clauses (SCCs) in its Data Processing Agreement. Contact [support](https://app.kaynos.net/terms) for SCC documentation.

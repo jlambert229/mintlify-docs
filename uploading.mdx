@@ -1,0 +1,163 @@
+---
+title: "Uploading videos"
+description: "Upload video to Kaynos. Supported formats (MP4, MOV, WebM, MKV), size limits, chunked upload, and troubleshooting."
+---
+<Note>
+  **TLDR:** Drag a video onto the upload area. MP4 recommended, under 5 GB, 1080p is plenty for coaching review.
+</Note>
+
+
+Each session or class uses one source: **Upload** (file from your device) or **Notes Only** (no video). Upload from [app.kaynos.net](https://app.kaynos.net) when you create or edit it.
+
+
+<Info>
+  Format and size limits: [Supported formats and limits](/formats).
+</Info>
+
+
+## Your first upload
+
+A **session** is for one assigned student (private lesson, individual review). A **class** is for everyone in your account (group session, shared recording). Upload a file in either case — create them after you [sign in](https://app.kaynos.net).
+
+
+<Tip>
+  New to the flow? Read [Creating a session](/creating-sessions) and [Creating a class](/creating-classes) first.
+</Tip>
+
+
+1.  Create a new session or class, then pick **Upload** for the video source.
+2.  Drag your file onto the box, or click to choose from Finder / Files.
+3.  Watch the progress bar for speed and time remaining.
+4.  When the green check appears, fill in title, date, student, and save.
+
+### Recording tips
+
+-   **Landscape orientation.** Your TV and your phone both want it.
+-   **Camera slightly high** so the full training area is visible, not just lower legs.
+-   **Even lighting** makes small details easier to see on review.
+
+
+<Tip>
+  Setting up a phone or camera for repeated recording? [Recording setup](/recording-setup) covers tripods, mics, lighting, and settings worth knowing.
+</Tip>
+
+
+## Large files
+
+Files over **20 MB** use chunked multipart upload (**20 MB** per chunk) with parallel connections. Failed parts retry automatically (up to **3 attempts** per chunk) with exponential backoff.
+
+## Requirements
+
+-   Formats: MP4, MOV, WebM, MKV (convert others before uploading).
+-   Max 5 GB per video.
+-   Admins and coaches only.
+
+## During upload
+
+The UI shows percent complete, current speed, time remaining, and a **Cancel** button.
+
+## Replace a video
+
+Open the session or class detail page. In the video section above the notes panel, click the **×** on the current video to remove it, then upload a replacement using the same flow. The previous file is deleted from storage.
+
+
+<Warning>
+  **Replacing video is destructive.** The old file is deleted from storage with no undo, and **every note attached to that video is permanently deleted along with it** — notes do not migrate to the new upload and cannot be recovered. Archive the video and copy any notes you want to keep before replacing.
+</Warning>
+
+
+<Accordion title="Upload troubleshooting">
+  ## Video upload problems
+
+  Large uploads depend on stable internet and a supported format. Work through the checks below before assuming a bug.
+
+
+  <Info>
+    Reference: [Supported formats and limits](/formats).
+  </Info>
+
+
+  ### Fails immediately
+
+  **"Please select a video file":** the file isn't MP4, MOV, WebM, or MKV. Convert to MP4 with [HandBrake](https://handbrake.fr) or [VLC](https://www.videolan.org/vlc/), then try again.
+
+  **File too big:** the limit is 5 GB. Trim the clip or export at 1080p — HandBrake's "Fast 1080p30" preset works well.
+
+  ### Progress appears stuck
+
+  1.  Large files can pause between chunks for 30–60 seconds — normal.
+  2.  Confirm the network works (open another site).
+  3.  Cancel and start again if it doesn't advance after 2 minutes.
+
+  ### Fails partway through
+
+  -   **Network error during part upload:** reconnect and retry.
+  -   **Part upload failed: 403:** on long uploads the session can expire. Cancel and upload again.
+  -   **500 server error:** wait briefly and retry; if it persists, email [support@kaynos.net](mailto:support@kaynos.net).
+
+  ### Slow uploads
+
+  Measure your **upload** speed, not download. [fast.com](https://fast.com) shows upload speed after the initial result.
+
+  Upload speed
+
+  500 MB
+
+  1 GB
+
+  2 GB
+
+  10 Mbps
+
+  ~7 min
+
+  ~14 min
+
+  ~28 min
+
+  25 Mbps
+
+  ~3 min
+
+  ~5 min
+
+  ~11 min
+
+  50 Mbps
+
+  ~1.5 min
+
+  ~3 min
+
+  ~5 min
+
+  100 Mbps
+
+  ~45 sec
+
+  ~1.5 min
+
+  ~3 min
+
+  A wired connection often beats crowded Wi-Fi. Pause heavy sync tools (Dropbox, Google Drive) and upload at a quieter time.
+
+  ### Status stuck on "uploading"
+
+  If the browser closed mid-upload, email [support@kaynos.net](mailto:support@kaynos.net) with the session or class name and we'll reset the status.
+
+  ### Still failing
+
+  Email [support@kaynos.net](mailto:support@kaynos.net) with: account name, browser, file type and size, and a screenshot if you have one.
+</Accordion>
+
+
+<Accordion title="Upload preflight checklist">
+  ## Upload pre-flight checklist
+
+  Run through this before uploading to dodge common issues.
+
+
+  <Info>
+    Full format details: [Supported formats and limits](/formats).
+  </Info>
+</Accordion>

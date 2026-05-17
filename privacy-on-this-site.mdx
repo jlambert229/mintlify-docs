@@ -1,0 +1,289 @@
+---
+title: "Privacy on this site"
+description: "Privacy on the Kaynos help center. What data stays in your browser and what is sent externally."
+---
+<Note>
+  **TLDR:** The help center stores a few preferences in your browser, makes no external requests during browsing, and never tracks you. The Kaynos application itself has its own [privacy policy](https://app.kaynos.net/privacy); what's below covers both, with compliance frameworks (COPPA, FERPA, CCPA, etc.) collapsed under "Compliance frameworks".
+</Note>
+
+
+## What stays in your browser
+
+We use `localStorage` and `sessionStorage` to remember your preferences. This data never leaves your device.
+
+Key
+
+Purpose
+
+Storage
+
+theme
+
+Dark/light mode preference
+
+localStorage
+
+lang
+
+Language preference (EN/ES)
+
+localStorage
+
+recent-pages
+
+Recently viewed pages
+
+localStorage
+
+search-history
+
+Recent search terms
+
+localStorage
+
+poll-votes, poll-voted, poll-custom
+
+Feature poll votes (legacy, no longer used)
+
+localStorage
+
+highlights
+
+Text highlights you've made
+
+localStorage
+
+scroll-pos
+
+Scroll position per page
+
+localStorage
+
+sb-expanded
+
+Which sidebar sections you've explicitly opened (default is collapsed)
+
+localStorage
+
+## What is sent externally
+
+No analytics, tracking pixels, or cookies are used. The "Contact Support" form composes a `mailto:` link — your email client sends the message, not this site.
+
+Fonts are self-hosted. No external requests after the initial page load, except when you click external links.
+
+
+<Info>
+  This page describes the help center at docs.kaynos.net. The application has its own policy at [app.kaynos.net/privacy](https://app.kaynos.net/privacy); sections below also cover the application.
+</Info>
+
+
+## Third-party processors (the application)
+
+Service
+
+Purpose
+
+Data
+
+Backblaze B2
+
+Video storage and playback (via presigned URLs)
+
+Uploaded video files (encrypted at rest)
+
+Stripe
+
+Payment processing
+
+Billing name, email (not card numbers)
+
+Resend
+
+Transactional email delivery (invites, password resets, mention notifications, reports)
+
+Recipient email addresses, message subject and body
+
+Twelve Labs
+
+AI video understanding for the optional AI review feature
+
+Video file URLs (presigned) and the visual content the model analyzes
+
+Deepgram
+
+Voice dictation (opt-in). Audio processed in real time and not stored by Deepgram.
+
+Audio processed in real time, not stored
+
+Neon
+
+PostgreSQL database hosting
+
+All structured account data (members, sessions, notes, etc.)
+
+Netlify
+
+Application hosting and serverless functions
+
+Application requests, server logs
+
+All processors have signed Data Processing Agreements. Kaynos never sells your data.
+
+## Data collection justification
+
+Data
+
+Purpose
+
+Retention
+
+Name, email
+
+Account identity, notifications
+
+Until account deletion
+
+Password (hashed)
+
+Authentication
+
+Until account deletion
+
+Video recordings
+
+Core coaching service
+
+6 months default (configurable per school on request)
+
+Coaching notes
+
+Timestamped feedback
+
+With associated session/class
+
+Progress data
+
+Resume playback, completion tracking
+
+With associated session/class
+
+IP address, browser
+
+Security, rate limiting
+
+90 days
+
+Payment metadata
+
+Billing (via Stripe — no card numbers)
+
+Per Stripe retention policy
+
+## Security standards
+
+-   Encryption in transit: TLS 1.2+ (HTTPS everywhere)
+-   Encryption at rest: AES-256 for stored video
+-   Passwords: bcrypt hashed (not reversible)
+-   Role-based access controls enforced at API and database level
+-   Playback URLs: time-limited and signed
+-   Payment: PCI-DSS compliant via Stripe (Kaynos never handles card numbers)
+-   Written information security program maintained (also covers NY SHIELD and MA 201 CMR 17.00 baselines)
+-   48-hour incident response protocol
+-   Vendor security assessments conducted
+
+## Your rights
+
+Regardless of your state or country, you can:
+
+-   Access your data (Admin → Export or email support)
+-   Correct inaccurate information (Profile settings)
+-   Delete your account (Profile → Delete Account)
+-   Opt out of optional features (voice dictation, email notifications)
+
+Exercising your privacy rights will not result in service degradation, higher prices, or reduced functionality. Step-by-step flows for every action — including parent-on-behalf requests, DPA requests, and breach notification — are on [Data & privacy rights](/data-rights).
+
+## Biometric data
+
+Video recordings may contain biometric identifiers (faces, body structure). Kaynos does **not** perform facial recognition, age detection, gait analysis, or automated biometric processing. Video is stored and delivered as-is for coaching review only.
+
+Biometric data in video follows the same retention period as the video itself (default 6 months). You may request earlier deletion by contacting support.
+
+## Data breach notification
+
+If a security breach affects your personal data, we will notify you via email within 48 hours of discovery. Notification will include: what data was affected, what we're doing about it, and steps you can take.
+
+## Law enforcement requests
+
+Kaynos discloses user data only in response to valid legal process (subpoena, court order, or warrant). We notify affected users unless legally prohibited from doing so.
+
+## Record-keeping
+
+Kaynos maintains records of all consumer privacy requests (access, deletion, correction) for 24 months per CCPA/CPRA requirements.
+
+## Compliance frameworks
+
+Specific frameworks Kaynos aligns with. To exercise rights under any of them, email [support@kaynos.net](mailto:support@kaynos.net) with your name, email, request type, and (for state-specific rights) which state you reside in. We respond within 45 calendar days.
+
+### COPPA — children under 13
+
+Kaynos is not designed for direct use by children under 13. If your organization enrolls students under 13:
+
+-   Obtain verifiable parental consent before creating the student's account.
+-   Ensure a parent email is registered so they can access their child's data.
+-   Parents can request review or deletion of their child's data by emailing [support@kaynos.net](mailto:support@kaynos.net).
+
+### FERPA — schools
+
+If your school or academy uses Kaynos for student records (performance videos tied to grades or evaluations), FERPA may apply.
+
+-   Kaynos provides a FERPA-compliant Data Processing Agreement (DPA) upon request — email [support@kaynos.net](mailto:support@kaynos.net).
+-   Admin and coach roles function as "school officials" with access limited to assigned students.
+-   Parents and eligible students (18+) may request access to or deletion of education records.
+
+### California — CCPA / CPRA
+
+California residents have specific rights under the California Consumer Privacy Act:
+
+-   **Right to know** what personal information is collected, used, and shared.
+-   **Right to delete** personal information (with limited exceptions).
+-   **Right to correct** inaccurate information.
+-   **Right to opt-out** of data sale or sharing. *Kaynos does not sell or share personal information with third parties for marketing.*
+-   **Right to non-discrimination** for exercising these rights.
+
+**Data categories collected:** identifiers (name, email), video recordings, professional information (role), internet activity (IP, browser, login times). **Retention:** account data until deletion; videos for 6 months (configurable); login/session data for 90 days.
+
+### California — Age-Appropriate Design Code (CAADCA)
+
+Kaynos enforces privacy-protective defaults for users under 18:
+
+-   No invasive analytics or behavioral profiling
+-   No targeted advertising
+-   Opt-in only for audio processing (voice dictation)
+-   No dark patterns in consent flows
+-   Parental consent required for users under 13 (COPPA)
+
+### Other US state privacy laws
+
+Kaynos complies with applicable state consumer privacy laws including Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA), Utah (UCPA), Texas (TDPSA), Montana, Iowa, Tennessee, Indiana, Oregon, Delaware, and others. Common rights across all states:
+
+-   Access, correct, and delete your personal data
+-   Opt out of targeted advertising and data sale (Kaynos does neither)
+-   Data portability (Admin → Export)
+-   Non-discrimination for exercising rights
+
+### Student privacy — SOPIPA, NY Education Law 2-d
+
+For K-12 schools and educational institutions:
+
+-   Kaynos does not sell student personal information (SOPIPA compliance).
+-   Kaynos does not share student data with third parties for marketing.
+-   Student and parent access/deletion rights are supported.
+-   Data security practices align with NY Education Law 2-d requirements.
+
+### State security laws — NY SHIELD, MA 201 CMR 17.00
+
+The Security standards section above (encryption, RBAC, incident response, vendor assessments) is the same baseline that satisfies NY SHIELD's "reasonable safeguards" and Massachusetts 201 CMR 17.00's written information security program requirement.
+
+### Accessibility — ADA / Section 508
+
+Kaynos is built to WCAG 2.1 AA standards. Features include keyboard navigation, screen reader support, skip links, focus management, and prefers-reduced-motion support. For a detailed accessibility report (VPAT), contact [support@kaynos.net](mailto:support@kaynos.net).

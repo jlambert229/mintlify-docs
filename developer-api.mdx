@@ -1,0 +1,41 @@
+---
+title: "Developer API"
+description: "Kaynos Developer API. Internal API reference for admins and instructors at Admin → API Docs. Public API, tokens, and webhooks are not available today."
+---
+<Note>
+  **TLDR:** Admins and coaches can view an internal API reference at [`/admin/api-docs`](https://app.kaynos.net/admin/api-docs). Public API tokens, third-party integrations, and customer-facing webhooks are not available today.
+</Note>
+
+
+## Internal API reference
+
+Kaynos ships an internal API reference for admins and coaches. It's a Swagger UI page backed by an OpenAPI spec covering the REST endpoints the web app uses.
+
+-   **Where:** Sign in as an admin or coach and open [`/admin/api-docs`](https://app.kaynos.net/admin/api-docs) directly. There's no menu item — bookmark the URL.
+-   **Who can see it:** Admins and coaches only. Students do not have access.
+-   **Authentication:** Session-cookie auth — the same login session that powers the app. There are no separate API keys or tokens to manage.
+-   **Scope:** Documentation of internal endpoints (sessions, classes, members, notes, uploads, billing, and more). Useful for understanding behavior, debugging, and internal tooling.
+
+
+<Info>
+  The internal reference is for transparency and internal use — not a stability contract. Endpoints and shapes can change between releases.
+</Info>
+
+
+<Tip>
+  **API field naming:** the role we call **coach** in the UI is stored as `"instructor"` in API request and response bodies (e.g. `role: "instructor"`). Plan for that mapping if you're scripting against the internal endpoints.
+</Tip>
+
+
+## Public developer API (not available)
+
+Kaynos does not offer a public developer API for third-party integrations today. **Not** supported:
+
+-   Public API tokens or personal access tokens
+-   OAuth apps or third-party clients
+-   Customer-facing webhooks for real-time events
+-   SDKs or client libraries
+
+A public API may come later. If your use case needs programmatic access or webhooks, [contact us](mailto:support@kaynos.net) or visit the [contact page](/contact) — demand drives priority.
+
+Follow our [release notes](/release-notes) for updates.

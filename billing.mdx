@@ -1,0 +1,75 @@
+---
+title: "Billing & subscription"
+description: "Kaynos billing and subscription. Manage card, invoices, refunds, taxes, failed payments, trial, and cancellation from the Stripe portal."
+---
+<Note>
+  **TLDR:** See [current pricing](https://www.kaynos.net/#pricing). Manage card, invoices, and cancellation from **Profile → Billing → Manage** (admin only). A failed payment gets one-time automatic retries before access pauses.
+</Note>
+
+
+## Where billing lives
+
+Billing is admin-only. Sign in as an admin, open your **Profile** (avatar in the header), then click **Manage** in the Billing section. That opens the Stripe billing portal — every billing change happens there.
+
+
+<Info>
+  Coaches and students can't see billing, even if they're paying for it personally — admins only. If you're paying for the academy from outside the school account, ask the school owner to add you as an admin first.
+</Info>
+
+
+## What you can do in the portal
+
+-   Update card, expiration, and billing address.
+-   Download every past invoice (Stripe also emails a PDF after each charge).
+-   See your next-charge date and amount.
+-   Cancel — see "Cancel" below for what that means.
+
+## Free trial
+
+Every account starts with a free trial. Card required to begin so we don't have to interrupt you on day one to take payment. The exact trial length lives on the [pricing page](https://www.kaynos.net/#pricing); the in-app countdown sits in Profile → Billing.
+
+**Cancel before the trial ends → no charge.** Cancel after → you're charged through the current period and access continues until that period ends.
+
+## Failed payment
+
+If a charge fails (expired card, insufficient funds, fraud check), Stripe retries automatically over the next few days and emails you on each attempt. While retries are pending, your account stays active.
+
+If every retry fails, the account moves to **past due**: read-only access stays for a short grace window so you can update the card. After that, the account suspends — data preserved, no upload/notes/share until billing is fixed.
+
+To recover: Profile → Billing → Manage → update the card. Stripe retries on the spot and the account restores.
+
+## Invoices & receipts
+
+Every charge emails a Stripe receipt to the billing address. Downloadable PDF invoices are in the portal. Need a custom invoice for accounting (specific school name, tax ID, PO number)? Email [support@kaynos.net](mailto:support@kaynos.net) and we'll add the line items.
+
+## Tax & VAT
+
+Stripe calculates tax from your billing address — VAT for EU customers, sales tax for applicable US states. The invoice line items show the breakdown. With a VAT ID or tax-exempt status, add it in the billing portal before your next renewal; it applies going forward.
+
+## Refunds
+
+We refund pro-rata for mid-period cancellations if you're unhappy with the service. Email [support@kaynos.net](mailto:support@kaynos.net) with your school name — refunds usually clear in 5–10 business days back to the original card.
+
+## Cancel
+
+Profile → Billing → Manage → Cancel subscription. Access stays available through the end of the period you've already paid for, then the account deactivates. Data is preserved for the standard [retention window](/privacy-on-this-site) after that — re-subscribe anytime to restore full access without losing recordings or notes.
+
+## Pausing
+
+There's no in-app pause. The functional equivalent: cancel via the portal (no next-period charge, data preserved during retention), re-subscribe when you're ready. For a longer pause where you're worried about hitting the retention window, email [support@kaynos.net](mailto:support@kaynos.net) and we'll work something out.
+
+## Adding coaches / changing seats
+
+The plan is flat per coach. There are no tiers or seat counts to manage. Add coaches by inviting them as admin/coach in [Members](/managing-members) — Kaynos creates their account at the standard rate and Stripe prorates the change on the next invoice.
+
+## Account deletion vs cancellation
+
+Two different things:
+
+-   **Cancel** stops the recurring charge. Data stays in retention; resume by re-subscribing.
+-   **Delete** (Admin → Delete School) schedules account-wide deletion with a 30-day grace period. After 30 days, all data is permanently removed and re-subscribing won't recover it.
+
+
+<Tip>
+  Stripe never sends Kaynos your card number — payment processing happens at PCI-DSS Level 1 inside Stripe. We see the receipt, the customer email, and the brand and last-4 of the card.
+</Tip>

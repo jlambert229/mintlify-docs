@@ -1,0 +1,96 @@
+---
+title: "Using Kaynos on mobile"
+description: "Using Kaynos on mobile. PWA install for iOS and Android, camera/mic/photo permissions, push notifications, recording and uploading from a phone, battery and data tips."
+---
+<Note>
+  **TLDR:** Kaynos runs in any modern mobile browser — no app-store download. Install it to your home screen for an app-like experience. This page covers install, permissions (camera, mic, photos), notifications, and the realities of recording and uploading on a phone.
+</Note>
+
+
+## Install Kaynos as a home-screen app
+
+Kaynos is a Progressive Web App (PWA). Once installed, it opens full-screen with no browser chrome and shows up as its own icon — same as a native app.
+
+### iOS (Safari)
+
+1.  Open [app.kaynos.net](https://app.kaynos.net) in Safari (it must be Safari, not Chrome on iOS).
+2.  Tap the **Share** button (square with an up-arrow) at the bottom of the screen.
+3.  Scroll the share sheet and tap **Add to Home Screen**.
+4.  Edit the name if you want, then tap **Add**. The Kaynos icon appears on your home screen.
+
+### Android (Chrome)
+
+1.  Open [app.kaynos.net](https://app.kaynos.net) in Chrome.
+2.  Tap the **⋮** menu in the top-right.
+3.  Tap **Add to Home screen** (or **Install app** on newer versions).
+4.  Confirm. The icon appears in your launcher.
+
+## Permissions
+
+Kaynos asks for permissions only when you use a feature that needs them. If you denied one earlier, grant it from your device settings — the in-app prompt won't reappear.
+
+### Camera and microphone (recording from the app)
+
+Granted on first use. If you denied by accident:
+
+-   **iOS Safari:** Settings app → Safari → Camera (and Microphone) → set Kaynos to **Allow**. If Kaynos isn't listed, open the site once first.
+-   **iOS PWA installed to home screen:** Settings app → scroll to **Kaynos** in the app list → toggle Camera / Microphone.
+-   **Android Chrome:** in Chrome, tap the **⋮** menu → Settings → Site settings → Camera (or Microphone) → find `app.kaynos.net` → set to Allow.
+
+### Microphone (voice dictation for notes)
+
+Voice dictation uses Deepgram for transcription. Same permission path as Camera/Microphone above. Audio is processed in real time and not stored — see [Privacy on this site](/privacy-on-this-site).
+
+### Photos / files (selecting a video to upload)
+
+-   **iOS:** tapping **Upload** shows the iOS picker — choose **Photo Library**, **Take Photo or Video**, or **Choose Files**. iOS may ask for photo-library access on first use.
+-   **Android:** a similar system picker appears — Files, Photos, or your gallery app.
+
+## Notifications
+
+Kaynos uses email for most notifications today (configured under [Profile → Notifications](/profile)) — no native push notifications yet on either platform.
+
+For a fast bell on your phone, two reliable approaches:
+
+-   **Email push:** in your phone's mail app, set your Kaynos address to "push" delivery. iOS Mail and Gmail both support this per-account.
+-   **Email-to-notification routing:** IFTTT or Apple Shortcuts can convert specific emails (sender = `noreply@kaynos.net`) into a phone notification.
+
+## Recording and uploading from a phone
+
+### What works well
+
+-   Short clips (under a few minutes) record and upload reliably on most phones from 2020 onward.
+-   Multipart upload kicks in at **20 MB** with parallel parts and automatic retry, so a brief signal hiccup doesn't restart the whole upload.
+-   Uploads continue while the app is in the foreground or backgrounded briefly. **Long uploads work best with the screen on.**
+
+### What to watch out for
+
+-   **Screen lock pauses uploads.** If a 30-minute class video is uploading and your phone sleeps, the upload pauses — sometimes the app resumes, sometimes the part URL has expired (1-hour limit) and you'll need to retry. Plug in and disable auto-lock for long uploads.
+-   **Hot phone during recording.** Long recordings heat the phone, which can throttle the camera. For 30+ minutes of footage, a dedicated camera or a laptop-tethered phone is more reliable.
+-   **Storage on the phone.** A 1080p video at typical bitrates is roughly 1 GB per 10 minutes. Check free space before recording — you can upload from the camera roll later.
+-   **Cellular data.** Uploading a 1 GB video on cellular eats your plan. Default to Wi-Fi. The [upload time calculator](/uploading) on the Uploading page helps you sanity-check before starting.
+
+## Mobile playback tips
+
+-   **Skip:** double-tap the left half of the player to skip back 10 seconds, the right half to skip forward.
+-   **Landscape:** rotate to widen the player when the notes panel is open.
+-   **Resume:** playback position syncs across devices — start on your phone at the gym, finish on your laptop at home.
+-   **Picture-in-picture (iOS Safari, Android Chrome):** tap the PiP button to keep watching while reading notes in another tab.
+
+## Battery and data
+
+-   Recording and uploading both drain the battery fast. Plug in for anything over 15 minutes.
+-   Streaming playback uses 0.5–2 GB per hour of 1080p. The player adapts to bandwidth, so slower connections get a lower bitrate automatically.
+-   On a strict cellular plan, load the video over Wi-Fi first, then watch later from the same browser session.
+
+## Troubleshooting
+
+-   **"This site can't be reached" after install:** stale PWA cache. Remove the home-screen shortcut and re-add it from the current app URL.
+-   **Permission prompt won't reappear:** you denied earlier. Use the device settings paths above.
+-   **Upload stuck:** see the [troubleshooting wizard](/troubleshoot) — pick "Upload won't finish".
+-   **Browser shows the old version:** hard-refresh (long-press refresh on Safari iOS; pull-to-refresh on Chrome Android), or clear site data for app.kaynos.net.
+
+
+<Info>
+  Need a desktop-class flow? See [Uploading videos](/uploading) and [Watching and reviewing](/playback) for the full workflow.
+</Info>
