@@ -1,0 +1,131 @@
+---
+title: "Error reference"
+description: "Kaynos error reference. Common sign-in, upload, playback, recording, payment, and email errors with fixes."
+---
+<Note>
+  **TLDR:** Common errors, what they mean, and what to try first. For something not listed here, the [troubleshooting wizard](/troubleshoot) walks step-by-step, or email [support@kaynos.net](mailto:support@kaynos.net).
+</Note>
+
+
+## Sign-in errors
+
+Invalid email or password
+
+The email or password didn't match. Check Caps Lock; paste the password to bypass typos. If you signed up with Google, click **Sign in with Google** rather than entering a password.
+
+Too many attempts (HTTP 429)
+
+The login endpoint is rate-limited per IP. Wait 5–10 minutes and try again. On a corporate network where several people retry at once, the limit can trip — try a different network or wait it out. Reset your password if you're not sure of it.
+
+Email not verified
+
+Your account exists but the welcome email hasn't been confirmed. Check spam and promotions for the verification link. Still missing? Ask your admin to resend the invite or email [support@kaynos.net](mailto:support@kaynos.net).
+
+Account suspended
+
+The school's subscription is past due or canceled. The admin updates billing — see [Billing & subscription](/billing).
+
+## Upload errors
+
+"Please select a video file"
+
+File type isn't supported. Convert to MP4 (H.264 video + AAC audio). Free tools: [HandBrake](https://handbrake.fr) or [VLC](https://www.videolan.org/vlc/).
+
+File too big (5 GB limit)
+
+Trim the clip or re-export at 1080p H.264. Most coaching content fits comfortably under 5 GB at 1080p30.
+
+Part upload failed: 403
+
+The signed upload URL expired (1-hour limit). Cancel and re-upload. Most common on long uploads with intermittent connectivity.
+
+500 server error during upload
+
+Transient issue on our side. Cancel and retry. If it persists, email [support@kaynos.net](mailto:support@kaynos.net) with the file size and the step it failed at.
+
+Upload stuck at the same percent
+
+A chunk is silently failing to retry. Cancel and re-upload. If your connection is unstable, switch to wired.
+
+Status stuck on "uploading"
+
+The browser closed mid-upload and the session didn't clean itself up. Email [support@kaynos.net](mailto:support@kaynos.net) with the session name; we'll reset the status.
+
+## Playback errors
+
+"This video cannot be played"
+
+Codec mismatch — usually MKV or an unusual audio codec. Try a different browser, or re-export to MP4 with H.264 video and AAC audio.
+
+Black screen with audio (or audio with no video)
+
+Codec mismatch on one of the tracks. Re-export as standard MP4 H.264/AAC and re-upload.
+
+Long buffering or stuttering
+
+Check bandwidth (download speed). Very high-bitrate 4K sources can stutter on standard home networks — a 1080p H.264 export plays more reliably.
+
+403 / "not authorized to view this video"
+
+The playback URL expired (4-hour limit) or your role changed. Refresh the page; the player generates a fresh presigned link.
+
+"This clip is no longer available" (shared link)
+
+The coach disabled sharing on the clip. Ask them to re-enable it — same URL works again.
+
+## Recording / camera errors
+
+"Camera permission denied"
+
+iOS Safari: Settings → Safari → Camera → set Kaynos to Allow. Android Chrome: tap the lock icon in the address bar → Permissions → Camera → Allow.
+
+"Microphone permission denied"
+
+Same path as camera. Required for voice dictation; not required for video upload.
+
+"Could not access camera"
+
+Another app or tab is holding the camera (FaceTime, Zoom, another open browser window). Close them, refresh, and try again.
+
+## Payment errors
+
+"Your card was declined"
+
+Stripe rejected the charge. Common reasons: expired card, insufficient funds, fraud-check from the issuing bank, or a country mismatch. Try a different card or contact your bank. Full detail in Profile → Billing → Manage.
+
+"This card requires authentication" (3DS)
+
+European cards trigger Strong Customer Authentication. Complete the bank prompt; Stripe retries automatically.
+
+Subscription past due
+
+One or more charges failed and the retry window has elapsed. Update your card in Profile → Billing → Manage. The account un-pauses on the next successful charge.
+
+## Email errors
+
+Invite email never arrives
+
+See [Email and notification issues](/email-issues). Usually: spam folder, address typo, or a corporate filter.
+
+Password reset link expired
+
+Reset links are valid for 1 hour. Request a new one from the login page (**Forgot password?**) or ask an admin to issue a manual reset.
+
+Email change verification expired
+
+Verification links live 24 hours. Re-request from Profile → Email → Send verification.
+
+## Generic errors
+
+"Something went wrong"
+
+Transient client-side error. Refresh once. If it persists, screenshot what you clicked and email [support@kaynos.net](mailto:support@kaynos.net).
+
+Red error banner across the top
+
+A network request failed. Check your internet, refresh, and retry. Persistent? [netlifystatus.com](https://www.netlifystatus.com/) covers the hosting status; for the app itself, email [support@kaynos.net](mailto:support@kaynos.net).
+
+
+<Tip>
+  If you have a specific code or message, paste it into the [error code lookup](/troubleshoot) on Troubleshoot — same content, indexed for fast filtering.
+</Tip>

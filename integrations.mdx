@@ -1,0 +1,66 @@
+---
+title: "Integrations & exports"
+description: "Kaynos integrations and exports. Data export (JSON/CSV), email, in-app chat, shareable clip links. What is and is not supported."
+---
+<Note>
+  **TLDR:** Kaynos is a focused tool — most things stay inside the app. Email notifications, in-app chat, full data export (JSON/CSV), and shareable clip links are the integration surface. Public API and webhooks aren't available yet.
+</Note>
+
+
+## What's available
+
+Data export (admin)
+
+**Admin → Reports & Exports**. Full school data as JSON; member list as CSV. Includes users, sessions, classes, notes, tags, and video metadata. Useful for backups, migrations, and GDPR portability.
+
+Usage reports (admin)
+
+Email reports of academy activity at a chosen cadence (off / weekly / monthly). Send a manual report on demand. Available once the school has 5+ sessions or classes.
+
+Email notifications
+
+Per-event categories under Profile → Notifications. Mention notifications include a deep link to the exact note timestamp.
+
+In-app chat
+
+Bottom-right corner inside [app.kaynos.net](https://app.kaynos.net) when logged in. Reaches support directly. Logs are kept for context if you reopen the same conversation later.
+
+Shareable clip links
+
+Toggle **Share** on any clip to generate a public link. Anyone with the link can view the clip — no login. Toggle off to revoke immediately. Useful for sharing a single technique clip with a coach at another gym, a parent, or a competition coach.
+
+Add to home screen (PWA)
+
+Both [the app](https://app.kaynos.net) and this help center support Add to Home Screen on iOS and Android — a full-screen icon-launched experience without browser chrome. See [Using Kaynos on mobile](/using-on-mobile).
+
+Internal API reference
+
+Admins and coaches can view [`/admin/api-docs`](https://app.kaynos.net/admin/api-docs) — the Swagger UI for the endpoints the web app uses. Session-cookie auth, no tokens. Not a stability contract — endpoints can change. See [Developer API](/developer-api).
+
+## What's not available (yet)
+
+-   **Public API with tokens.** No personal access tokens, no OAuth apps, no third-party API clients. Demand drives the roadmap — let us know via [Feature requests](/feature-requests).
+-   **Customer-facing webhooks** for real-time events.
+-   **SDKs / client libraries.**
+-   **Calendar sync** (Google / Apple / Outlook). Schedule is in-app only today.
+-   **Slack, Discord, Teams**, or chat-app bridges.
+-   **Direct LMS integration** (Canvas, Schoology, etc.).
+-   **Video CDN embed** on external sites. Clip share links are the closest equivalent.
+-   **Native push notifications** on iOS / Android. Email is the notification channel today; on mobile, set the mailbox to push delivery for instant pings.
+
+## Migrating from another platform
+
+Moving from a competitor:
+
+-   Export your videos from the source as files (not just URLs) and upload to Kaynos one at a time — the [upload flow](/uploading) doesn't import in bulk yet.
+-   Re-build your tag vocabulary in Kaynos when you go; the source's taxonomy probably doesn't map.
+-   Hundreds of videos to move? Email [support@kaynos.net](mailto:support@kaynos.net) — we can help.
+
+## Backups
+
+Run the JSON export at the cadence your retention policy requires. Videos stay in Backblaze B2 within the retention window; the export is the metadata/notes/structure snapshot.
+
+
+<Tip>
+  Have an integration that would make Kaynos work better for you? Submit a [feature request](/feature-requests) with the specific workflow you'd want — that's how we prioritize.
+</Tip>

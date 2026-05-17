@@ -1,0 +1,128 @@
+---
+title: "Watching and reviewing"
+description: "Watch and review video in Kaynos. Playback speed, keyboard shortcuts, timeline notes, clips, and mobile playback."
+---
+<Note>
+  **TLDR:** Open a session or class and press play. Use <kbd>Space</kbd> to pause, <kbd>J</kbd>/<kbd>L</kbd> to skip 10s, <kbd>F</kbd> for fullscreen. Click **Add Note** to leave timestamped feedback.
+</Note>
+
+
+Playback runs in the browser — no app install needed. Open recordings at [app.kaynos.net](https://app.kaynos.net).
+
+
+<Tip>
+  Problems playing video? See the troubleshooting section below.
+</Tip>
+
+
+## Playback speed
+
+Use **0.5×**–**2×** for slow-motion analysis or faster skimming.
+
+## Timeline markers
+
+Markers on the timeline are notes. Hover to preview, click to jump to that moment.
+
+## Add a note while watching
+
+1.  Pause the video.
+2.  Click **Add Note**, enter your text, then **Save**.
+
+The note saves at the current playhead position.
+
+
+<Accordion title="Keyboard shortcuts">
+  **Player controls** (when the video has focus):
+
+  Play / Pause<kbd>Space</kbd> or <kbd>K</kbd>
+
+  Skip back / forward 10s<kbd>J</kbd> / <kbd>L</kbd> or <kbd>←</kbd> / <kbd>→</kbd>
+
+  Fullscreen<kbd>F</kbd>
+
+  Mute / unmute<kbd>M</kbd>
+
+  Volume up / down<kbd>↑</kbd> / <kbd>↓</kbd>
+
+  **Inside the note editor** (after clicking Add Note):
+
+  Save note<kbd>⌘</kbd>/<kbd>Ctrl</kbd> <kbd>Enter</kbd>
+
+  Cancel<kbd>Esc</kbd>
+</Accordion>
+
+
+## Mobile playback
+
+Kaynos runs in the mobile browser — no app install needed.
+
+-   **Skip:** Double-tap the left half to skip back 10 seconds, the right half to skip forward.
+-   **Landscape:** Rotate your phone for a wider view, especially with the notes panel open.
+-   **Resume:** Playback position syncs across devices — start on your phone, continue on your laptop.
+-   **Add to Home Screen:** iOS: Share → Add to Home Screen. Android: browser menu → Add to Home Screen.
+
+## Progress tracking
+
+Playback position saves automatically. Coaches see completion percentage and last-viewed time without heavy analytics.
+
+## Clips
+
+Create a clip from any session or class to highlight a specific moment.
+
+1.  While watching, set the start and end time for the clip.
+2.  Click **Create Clip**. The clip saves to your clips list.
+3.  Toggle **Share** to generate a shareable link anyone can view — no login required.
+
+Manage clips from the session or class detail page. **Disable sharing** at any time — every existing link stops working immediately (returns 404), so a leaked link is recoverable without rotating tokens. Re-enabling later restores access using the same link.
+
+### Recap clips
+
+Create 2–3 minute recap clips from full class recordings so students see the highlights without watching the whole 60 minutes.
+
+1.  Open the class recording and play to the key moment.
+2.  Set the clip start time, then play to the end of the segment and set the end time.
+3.  Click **Create Clip** and give it a descriptive title (e.g., "Guard retention drill — key details").
+4.  Toggle **Share** to make it visible to all students in the class.
+
+Students see recap clips on their dashboard alongside full recordings. Short clips get much higher watch rates.
+
+### Sharing clips externally
+
+Share a clip with someone who doesn't have a Kaynos account — a training partner at another gym, a parent, or a competition coach.
+
+1.  Create a clip and toggle **Share** on.
+2.  Copy the shareable link. Anyone with the link can view the clip — no login required.
+3.  Toggle sharing off to revoke access — old links return 404 instantly; no token rotation or new URL needed.
+
+Shared clips show the video segment only — no notes, no account details, no other sessions.
+
+
+<Accordion title="Playback troubleshooting">
+  If the player is blank or showing errors, work through these checks in order.
+
+
+  <Info>
+    Codecs: [Supported formats and limits](/formats).
+  </Info>
+
+
+  ### Player blank or broken controls
+
+  **Black screen / no controls:** refresh, then hard refresh or clear cache, then try [Chrome](https://www.google.com/chrome/). Confirm the upload finished (not stuck on "uploading" or showing "failed").
+
+  **"Cannot be played":** often a codec or browser issue. MKV files use codecs that vary by browser — try [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/firefox/), or re-export to MP4 with H.264 video and AAC audio.
+
+  ### Buffering or long spinners
+
+  -   Check your bandwidth (upload and download can differ dramatically by network).
+  -   Close other streaming tabs or heavy downloads.
+  -   High-bitrate 4K sources can stutter on typical home connections — a 1080p H.264 export plays more reliably and is enough for coaching review.
+
+  ### Sound but no picture (or the reverse)
+
+  Usually a codec mismatch. Try another browser; if it persists, re-export with standard H.264/AAC.
+
+  ### Resume position wrong
+
+  Progress saves shortly after pausing. Closing the tab immediately can skip the save.
+</Accordion>

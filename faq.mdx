@@ -1,0 +1,156 @@
+---
+title: "Frequently asked questions"
+description: "Frequently asked questions about Kaynos. Pricing, security, privacy, browser support, and billing."
+---
+<Note>
+  **TLDR:** Common pre-purchase and account questions, grouped: signup & what you're getting, day-to-day running, trust & minors on camera, devices & integrations, support, billing & pricing, search & navigation, data, remote coaching, and the internal API. For account-specific issues, [email support](mailto:support@kaynos.net) or use the in-app chat.
+</Note>
+
+
+Kaynos is built for coaches who use video review: publish sessions and classes, add timestamped notes, and members watch on their own time.
+
+
+<Info>
+  **Quick links:** App: [app.kaynos.net](https://app.kaynos.net) · Support: [support@kaynos.net](mailto:support@kaynos.net) · Setup: [Setting up your account](/setup)
+</Info>
+
+
+## What you're signing up for
+
+### What is Kaynos, in plain language?
+
+It replaces ad-hoc clip sharing in chat. Upload session footage to a **session** (one student) or a **class** (everyone in your account), add timeline notes, and students review on their own time. Everything runs in the browser at [app.kaynos.net](https://app.kaynos.net) — no app install.
+
+### Do my students need to install something?
+
+No. They open [app.kaynos.net](https://app.kaynos.net) in any phone or laptop browser. Practical bandwidth: **5 Mbps down for smooth 1080p playback**, **10 Mbps up for a 1080p upload**. The [Uploading videos](/uploading) page has a calculator for larger files and slower connections.
+
+### What types of coaching does this work for?
+
+Kaynos works for any coaching practice that reviews video: personal training, sports coaching, music lessons, dance instruction, or any skill-based teaching.
+
+* * *
+
+## Running your account
+
+### Do you cap how many students or coaches I can add?
+
+No. The product does not enforce a member or coach limit.
+
+### Can students watch each other's private lessons?
+
+**No.** A **session** is visible only to that student, the staff who created or need it, and admins. **Classes** are shared with everyone in your account.
+
+### Can people download my class video?
+
+There's no download button. Playback uses expiring streaming links, making your curriculum harder to copy as a casual file share.
+
+* * *
+
+## Trust, minors on camera, and policy
+
+### How serious are you about security?
+
+HTTPS in transit, hashed passwords, and video in cloud storage served via short-lived presigned URLs. See [Video storage and retention](/storage) for details.
+
+### Which third parties process my data?
+
+The full subprocessor list is on the [privacy page](/privacy-on-this-site). Headline subprocessors: **Stripe** (billing), **Resend** (transactional email), **Backblaze B2** (video storage), and **Neon** (Postgres). Optional features use **Twelve Labs** (AI review of an uploaded video, on demand) and **Deepgram** (voice dictation for note entry, opt-in per use). Audio sent to Deepgram is processed in real time and is not stored by Deepgram.
+
+### What about minors on the footage?
+
+Kaynos is not designed for users under 13 (COPPA) or under 16 in the EU (GDPR Article 8). Organizations using Kaynos with minors must obtain appropriate parental or guardian consent. Schools using Kaynos for student records can request a FERPA-compliant data processing agreement.
+
+Read the [Terms of Service](https://app.kaynos.net/terms) in the app. For legal questions, consult qualified counsel.
+
+### Do you comply with state privacy laws?
+
+Yes. Kaynos complies with applicable US privacy laws including CCPA/CPRA (California), VCDPA (Virginia), CPA (Colorado), CTDPA (Connecticut), and others. We do not sell personal information. See our [privacy page](/privacy-on-this-site) for details on your rights.
+
+* * *
+
+## Devices and integrations
+
+### Which browsers are supported?
+
+Current Chrome, Firefox, Safari, and Edge. If upload or playback fails, try Chrome first.
+
+### Do you expose an API?
+
+Admins and coaches can view an internal API reference at `/admin/api-docs`. A public developer API with tokens and webhooks for third-party integrations is not available today. See the [Developer API](/developer-api) page for details.
+
+* * *
+
+## Support
+
+### How do I contact you?
+
+Email [support@kaynos.net](mailto:support@kaynos.net) with what happened, what you expected, your account name, and your browser. A screenshot or short screen recording speeds up diagnosis. In-app chat is available when logged in to [app.kaynos.net](https://app.kaynos.net).
+
+### Can I delete my account?
+
+Yes. Delete your own account from **Profile → Delete Account**. Admins can schedule school deletion from **Admin → Delete School** — a 30-day grace period lets you cancel. After 30 days, all data is permanently removed.
+
+* * *
+
+## Billing and pricing
+
+
+<Info>
+  Full coverage of refunds, invoices, taxes, failed payment, pausing, and cancellation lives on the dedicated [Billing & subscription](/billing) page.
+</Info>
+
+
+### How much does Kaynos cost?
+
+Plan pricing, what's included, and free-trial terms live on the [Kaynos pricing page](https://www.kaynos.net/#pricing) — the single source of truth, so this help center never drifts. A card is required to start the trial; cancel before it ends and you won't be charged.
+
+### What happens when my trial ends?
+
+Billing starts automatically when the trial ends. Cancel before it ends and you won't be charged. Your data stays available while your subscription is active.
+
+### Where do I see how many trial days are left?
+
+Sign in as an admin and open your **Profile** (avatar in the header). The Billing section shows your status (trialing, active, past due, or cancelled) and, during a trial, when it ends.
+
+### How do I manage my subscription?
+
+Open your **Profile** (avatar in the header) and click **Manage** in the Billing section — admins only. This opens the Stripe billing portal where you can:
+
+-   Update your payment method (credit card)
+-   View past invoices and receipts
+-   Cancel your subscription
+
+Kaynos never sees your credit card number — all payment processing is handled by Stripe (PCI-DSS Level 1 certified).
+
+### Can I pause my subscription?
+
+Not directly from the app. To take a break, cancel from the Stripe billing portal (Profile → Manage) — your account stays available through the end of the paid period, then deactivates. Re-subscribe any time to restore access. For a longer pause without losing data, email [support@kaynos.net](mailto:support@kaynos.net) and we'll work something out.
+
+* * *
+
+## Search and navigation
+
+### Is there a quick way to find things?
+
+Use the search bar at the top of every page. Type a keyword — matching pages and sections appear instantly. Press <kbd>Cmd+K</kbd> (Mac) or <kbd>Ctrl+K</kbd> (Windows) to jump into search from anywhere; arrow keys navigate results, Enter opens one.
+
+* * *
+
+## Data
+
+### Can I export my data?
+
+Admins can export all school data from **Admin → Export**. The export includes users, sessions, classes, notes, tags, and video metadata in a structured format for backup or GDPR compliance.
+
+* * *
+
+## Remote coaching
+
+### Can I coach remotely with Kaynos?
+
+Yes. Many coaches use Kaynos for async video review with students worldwide. Tips:
+
+-   Organize students by training phase using tags (e.g., `beginner`, `competition`, `rehab`).
+-   Enable **email notifications** so students know when your review is ready.
+-   Use keyboard shortcuts for speed: <kbd>J</kbd>/<kbd>L</kbd> to scrub the timeline, then <kbd>Cmd+Enter</kbd> (or <kbd>Ctrl+Enter</kbd>) once you're in the note editor to save.

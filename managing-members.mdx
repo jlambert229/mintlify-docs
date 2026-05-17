@@ -1,0 +1,98 @@
+---
+title: "Managing members"
+description: "Manage members in Kaynos. Invite coaches and students, change roles, reset passwords, admin panel overview."
+---
+<Note>
+  **TLDR:** Admins manage the full roster from **Admin**. Coaches manage their own students from **Students**. Use the role dropdown to change permissions and the **Remove** button to revoke access — notes the member created stay for history.
+</Note>
+
+
+Admins use **Admin** for the full roster. Coaches use **Students** to manage their own student invites. Everything happens in [app.kaynos.net](https://app.kaynos.net).
+
+## Add someone
+
+See [Inviting your team](/inviting-members) for the invite flow.
+
+## Change roles
+
+**Admin** → select the member → role dropdown → save. Changes apply immediately. Details: [Understanding user roles](/roles).
+
+## Remove access
+
+**Remove Member** ends access immediately. Notes they created remain for history. You can also remove a student from their profile page (`/students/<id>`) with the **Remove** button — admin only, mirrors the roster flow.
+
+
+<Info>
+  Removal is immediate — the person loses login access to your account on [app.kaynos.net](https://app.kaynos.net) right away.
+</Info>
+
+
+## Activity indicator and email privacy
+
+Student avatars in the roster show an activity dot: **green** when the student had a session in the last 30 days, **dim** when activity is older than 30 days, no dot when they have no sessions yet.
+
+For screen-sharing or recording, toggle **Hide emails** in the Members section. Addresses are masked to first letter + domain (`j****@example.com`); search still works against the full address.
+
+## Common questions
+
+**One person, two accounts?** Use a different email per account. Each account is fully separate.
+
+**Member limits?** No headcount cap.
+
+**Student-to-student invites?** Only staff roles can invite; students cannot.
+
+## Multiple schools
+
+Kaynos supports multiple schools under one account. Multi-school setup is handled by a tenant admin or by contacting [support@kaynos.net](mailto:support@kaynos.net) — not self-service. Each school has its own roster, sessions, classes, and storage quota.
+
+## Branding
+
+Upload a custom logo for your academy under **Admin → Branding**. Members see it in the header after they log in. PNG or SVG, square, at least 200×200px.
+
+## School hours
+
+Set operating hours under **Admin → School hours**. Default is 6 AM to 9 PM. The schedule view uses these hours for the daily/weekly grids; sessions can still be booked outside the window.
+
+## Usage reports
+
+Once your school has at least five sessions or classes, admins can receive automated email reports summarizing activity.
+
+1.  Go to **Admin → Reports & Exports**.
+2.  Choose frequency: **off**, **weekly**, or **monthly**.
+3.  Reports cover the previous period — sessions and classes created, active students, storage usage.
+
+Click **Send now** to trigger an immediate report.
+
+## Admin panel overview
+
+The Admin panel has several sections. Here's what each does, in order:
+
+Academy
+
+School name and subscription status (active, trialing, past due, cancelled). Edit the academy name from here.
+
+Members
+
+View roster, add/remove members, change roles, reset passwords, filter by role, and toggle email privacy mode for screen sharing.
+
+School hours
+
+Set operating hours used by the schedule view (default 6 AM–9 PM).
+
+Branding
+
+Upload a custom logo for the in-app header.
+
+Storage
+
+Monitor video count and storage usage against your limits (default: 100 videos, 50 GB). View expiring videos. Request a storage increase.
+
+Reports & Exports
+
+Configure automated usage reports (off/weekly/monthly), send a manual report, and export school data as JSON or members as CSV. Visible once your school has at least 5 sessions or classes.
+
+Danger Zone
+
+Schedule account deletion (30-day grace period) or cancel a pending deletion. Collapsed by default; auto-expanded if a deletion is already scheduled.
+
+Billing (manage subscription, update payment method) lives on the signed-in admin's **Profile** page, not under Admin.

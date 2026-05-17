@@ -31,9 +31,35 @@
         "groups": [
           {
             "group": "Get started",
-            "pages": [
-              "index"
-            ]
+            "pages": ["index", "setup", "roles", "glossary", "faq"]
+          },
+          {
+            "group": "Video",
+            "pages": ["uploading", "playback", "formats", "storage", "recording-setup"]
+          },
+          {
+            "group": "Sessions & Classes",
+            "pages": ["creating-sessions", "creating-classes", "notes", "progress"]
+          },
+          {
+            "group": "Account",
+            "pages": ["profile", "billing"]
+          },
+          {
+            "group": "Admin",
+            "pages": ["inviting-members", "managing-members", "developer-api", "integrations"]
+          },
+          {
+            "group": "Role guides",
+            "pages": ["coach-handbook", "student-guide", "parent-guide"]
+          },
+          {
+            "group": "Troubleshoot",
+            "pages": ["troubleshoot", "login-issues", "email-issues", "performance", "errors", "using-on-mobile"]
+          },
+          {
+            "group": "More",
+            "pages": ["release-notes", "feature-requests", "contact", "privacy-on-this-site", "data-rights"]
           }
         ]
       }
@@ -64,6 +90,55 @@
       "vscode"
     ]
   },
+  "redirects": [
+    { "source": "/whats-new", "destination": "/release-notes" },
+    { "source": "/quick-tips", "destination": "/setup" },
+    { "source": "/onboarding-timeline", "destination": "/setup" },
+    { "source": "/first-upload", "destination": "/uploading" },
+    { "source": "/upload-checklist", "destination": "/uploading" },
+    { "source": "/speed-calculator", "destination": "/formats" },
+    { "source": "/player-shortcuts", "destination": "/playback" },
+    { "source": "/session-vs-class", "destination": "/creating-sessions" },
+    { "source": "/tags", "destination": "/notes" },
+    { "source": "/notifications", "destination": "/profile" },
+    { "source": "/upload-issues", "destination": "/uploading" },
+    { "source": "/playback-issues", "destination": "/playback" },
+    { "source": "/error-lookup", "destination": "/errors" },
+    { "source": "/browser-check", "destination": "/troubleshoot" },
+    { "source": "/mobile", "destination": "/performance" },
+    { "source": "/pricing", "destination": "/billing" },
+    { "source": "/subscription", "destination": "/billing" },
+    { "source": "/cancel", "destination": "/billing" },
+    { "source": "/refund", "destination": "/billing" },
+    { "source": "/invoice", "destination": "/billing" },
+    { "source": "/invoices", "destination": "/billing" },
+    { "source": "/error", "destination": "/errors" },
+    { "source": "/error-codes", "destination": "/errors" },
+    { "source": "/troubleshooting-errors", "destination": "/errors" },
+    { "source": "/camera", "destination": "/recording-setup" },
+    { "source": "/cameras", "destination": "/recording-setup" },
+    { "source": "/recording", "destination": "/recording-setup" },
+    { "source": "/hardware", "destination": "/recording-setup" },
+    { "source": "/equipment", "destination": "/recording-setup" },
+    { "source": "/tripod", "destination": "/recording-setup" },
+    { "source": "/microphone", "destination": "/recording-setup" },
+    { "source": "/privacy-rights", "destination": "/data-rights" },
+    { "source": "/gdpr", "destination": "/data-rights" },
+    { "source": "/ccpa", "destination": "/data-rights" },
+    { "source": "/dpa", "destination": "/data-rights" },
+    { "source": "/student", "destination": "/student-guide" },
+    { "source": "/students", "destination": "/student-guide" },
+    { "source": "/student-handbook", "destination": "/student-guide" },
+    { "source": "/coach", "destination": "/coach-handbook" },
+    { "source": "/coach-playbook", "destination": "/coach-handbook" },
+    { "source": "/coaching", "destination": "/coach-handbook" },
+    { "source": "/integration", "destination": "/integrations" },
+    { "source": "/api", "destination": "/developer-api" },
+    { "source": "/export", "destination": "/integrations" },
+    { "source": "/exports", "destination": "/integrations" },
+    { "source": "/webhooks", "destination": "/integrations" },
+    { "source": "/backup", "destination": "/integrations" }
+  ],
   "seo": {
     "metatags": {
       "og:site_name": "Kaynos Docs",
