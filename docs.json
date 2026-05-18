@@ -5,8 +5,8 @@
   "description": "Kaynos help center - setup, video upload, playback, troubleshooting, and developer API reference.",
   "colors": {
     "primary": "#2184F3",
-    "light": "#5BA8F7",
-    "dark": "#1769C2"
+    "light": "#4DA3F7",
+    "dark": "#1A6FDB"
   },
   "favicon": "/favicon.svg",
   "appearance": {
@@ -15,8 +15,18 @@
   },
   "background": {
     "color": {
-      "dark": "#0E1016",
+      "dark": "#060609",
       "light": "#FFFFFF"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Inter",
+      "weight": 600
+    },
+    "body": {
+      "family": "Inter",
+      "weight": 400
     }
   },
   "logo": {
