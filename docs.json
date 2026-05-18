@@ -88,6 +88,11 @@
       "href": "https://app.kaynos.net"
     }
   },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
+  },
   "contextual": {
     "options": [
       "copy",
